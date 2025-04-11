@@ -17,7 +17,6 @@
 
             <div class="d-flex align-items-center justify-content-between">
                 <a href="/" class="logo d-flex align-items-center">
-                    <img src="dog.jpg" alt="">
                     <span class="d-none d-lg-block">SỔ KẾ TOÁN</span>
                 </a>
                 <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -60,9 +59,9 @@
                             </li>
 
                             <li>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                <a class="dropdown-item d-flex align-items-center" href="/setting">
                                     <i class="bi bi-gear"></i>
-                                    <span>Account Settings</span>
+                                    <span>Cài đặt</span>
                                 </a>
                             </li>
                             <li>
@@ -72,7 +71,7 @@
                             <li>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <i class="bi bi-question-circle"></i>
-                                    <span>Need Help?</span>
+                                    <span>Cần hỗ trợ?</span>
                                 </a>
                             </li>
                             <li>
@@ -80,9 +79,9 @@
                             </li>
 
                             <li>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                <a class="dropdown-item d-flex align-items-center" href="/logout">
                                     <i class="bi bi-box-arrow-right"></i>
-                                    <span>Sign Out</span>
+                                    <span>Thoát</span>
                                 </a>
                             </li>
 
@@ -103,26 +102,31 @@
             <ul class="sidebar-nav" id="sidebar-nav">
 
                 <li class="nav-item">
-                    <a class="nav-link " href="index.html">
+                    <a class="nav-link " href="/">
                         <i class="bi bi-grid"></i>
-                        <span>Dashboard</span>
+                        <span>Trang chủ</span>
                     </a>
                 </li><!-- End Dashboard Nav -->
 
                 <li class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-                        <i class="bi bi-menu-button-wide"></i><span>Components</span><i
+                        <i class="bi bi-menu-button-wide"></i><span>Bán hàng</span><i
                             class="bi bi-chevron-down ms-auto"></i>
                     </a>
                     <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="components-alerts.html">
-                                <i class="bi bi-circle"></i><span>Alerts</span>
+                            <a href="/order/form">
+                                <i class="bi bi-circle"></i><span>Bán hàng</span>
                             </a>
                         </li>
                         <li>
-                            <a href="components-accordion.html">
-                                <i class="bi bi-circle"></i><span>Accordion</span>
+                            <a href="/order">
+                                <i class="bi bi-circle"></i><span>Lịch sử bán hàng</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/order/debt">
+                                <i class="bi bi-circle"></i><span>Công nợ</span>
                             </a>
                         </li>
                     </ul>
@@ -130,17 +134,28 @@
 
                 <li class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-                        <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
+                        <i class="bi bi-journal-text"></i><span>Sản phẩm</span><i
+                            class="bi bi-chevron-down ms-auto"></i>
                     </a>
                     <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="forms-elements.html">
-                                <i class="bi bi-circle"></i><span>Form Elements</span>
+                            <a href="/product">
+                                <i class="bi bi-circle"></i><span>Sản phẩm</span>
                             </a>
                         </li>
                         <li>
-                            <a href="forms-layouts.html">
-                                <i class="bi bi-circle"></i><span>Form Layouts</span>
+                            <a href="/product/group">
+                                <i class="bi bi-circle"></i><span>Nhóm sản phẩm</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/product/unit">
+                                <i class="bi bi-circle"></i><span>Đơn vị tính</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/product/supplier">
+                                <i class="bi bi-circle"></i><span>Nhà cung cấp</span>
                             </a>
                         </li>
                     </ul>
@@ -148,66 +163,104 @@
 
                 <li class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-                        <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i
+                        <i class="bi bi-layout-text-window-reverse"></i><span>Kho</span><i
                             class="bi bi-chevron-down ms-auto"></i>
                     </a>
                     <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="tables-general.html">
-                                <i class="bi bi-circle"></i><span>General Tables</span>
+                            <a href="/warehouse">
+                                <i class="bi bi-circle"></i><span>Quản lý nhập xuất tồn</span>
                             </a>
                         </li>
                         <li>
-                            <a href="tables-data.html">
-                                <i class="bi bi-circle"></i><span>Data Tables</span>
+                            <a href="/warehouse/list">
+                                <i class="bi bi-circle"></i><span>Phiếu nhập hàng</span>
                             </a>
                         </li>
                     </ul>
                 </li><!-- End Tables Nav -->
 
                 <li class="nav-item">
-                    <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
-                        <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i>
+                    <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+                        <i class="bi bi-people"></i><span>Khách hàng</span><i class="bi bi-chevron-down ms-auto"></i>
                     </a>
-                    <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="charts-chartjs.html">
-                                <i class="bi bi-circle"></i><span>Chart.js</span>
+                            <a href="/customer">
+                                <i class="bi bi-circle"></i><span>Danh sách khách hàng</span>
                             </a>
                         </li>
                         <li>
-                            <a href="charts-apexcharts.html">
-                                <i class="bi bi-circle"></i><span>ApexCharts</span>
+                            <a href="/customer/potential">
+                                <i class="bi bi-circle"></i><span>Khách hàng tiềm năng</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/customer/group">
+                                <i class="bi bi-circle"></i><span>Nhóm khách hàng</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li><!-- End Icons Nav -->
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+                        <i class="bi bi-bar-chart"></i><span>Báo cáo</span><i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <li>
+                            <a href="/report/revenue">
+                                <i class="bi bi-circle"></i><span>Doanh thu</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/report/profit">
+                                <i class="bi bi-circle"></i><span>Lợi nhuận</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/report/cash">
+                                <i class="bi bi-circle"></i><span>Sổ quỹ</span>
                             </a>
                         </li>
                     </ul>
                 </li><!-- End Charts Nav -->
 
                 <li class="nav-item">
-                    <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-                        <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
+                    <a class="nav-link collapsed" data-bs-target="#settings-nav" data-bs-toggle="collapse" href="#">
+                        <i class="bi bi-gear-fill"></i><span>Cài đặt khác</span><i
+                            class="bi bi-chevron-down ms-auto"></i>
                     </a>
-                    <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <ul id="settings-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="icons-bootstrap.html">
-                                <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
+                            <a href="/setting">
+                                <i class="bi bi-circle"></i><span>Cài đặt khác</span>
                             </a>
                         </li>
                         <li>
-                            <a href="icons-remix.html">
-                                <i class="bi bi-circle"></i><span>Remix Icons</span>
+                            <a href="/department">
+                                <i class="bi bi-circle"></i><span>Chi nhánh</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/officer">
+                                <i class="bi bi-circle"></i><span>Nhân sự</span>
+                            </a>
+                        </li><li>
+                            <a href="/in_out/type">
+                                <i class="bi bi-circle"></i><span>Loại thu chi</span>
                             </a>
                         </li>
                     </ul>
-                </li><!-- End Icons Nav -->
+                </li><!-- End Charts Nav -->
 
                 <li class="nav-heading">Pages</li>
 
                 <!-- End Logout Nav -->
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="#">
+                    <a class="nav-link collapsed" href="/logout">
                         <i class="bi bi-box-arrow-in-right"></i>
-                        <span>Logout</span>
+                        <span>Thoát</span>
                     </a>
                 </li>
                 <!-- End Logout Nav -->
@@ -220,11 +273,11 @@
         <main id="main" class="main">
 
             <div class="pagetitle">
-                <h1>Dashboard</h1>
+                <h1>Trang quản trị</h1>
                 <nav>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+                        <li class="breadcrumb-item active">Trang quản trị</li>
                     </ol>
                 </nav>
             </div><!-- End Page Title -->
@@ -265,7 +318,7 @@
                                 <div class="card info-card customers-card">
 
                                     <div class="card-body">
-                                        <h5 class="card-title">Don hang</h5>
+                                        <h5 class="card-title">Đơn hàng</h5>
 
                                         <div class="d-flex align-items-center">
                                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -290,7 +343,7 @@
                                 <div class="card info-card revenue-card">
 
                                     <div class="card-body">
-                                        <h5 class="card-title">Loi nhuan</h5>
+                                        <h5 class="card-title">Lợi nhuận</h5>
 
                                         <div class="d-flex align-items-center">
                                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -314,11 +367,11 @@
 
                     <div class="w-100">
                         <div class="alert alert-warning" role="alert">
-                            <i class="bi bi-hourglass-split"></i> Ban con 5 ngay dung thu mien phi
+                            <i class="bi bi-hourglass-split"></i> Bạn còn 5 ngày dùng thử miễn phí
 
                             <div class="mt-3 d-flex justify-content-start align_items_center gap-3">
-                                <button class="btn btn-outline-primary btn-sm">Lien he tu van</button>
-                                <button class="btn btn-outline-success btn-sm">Nang cap ngay</button>
+                                <button class="btn btn-outline-primary btn-sm">Liên hệ tư vấn</button>
+                                <button class="btn btn-outline-success btn-sm">Nâng cấp ngay</button>
                             </div>
                         </div>
                     </div>
@@ -326,10 +379,10 @@
                     <div class="col-12">
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-4">
-                                <div class="card info-card text-primary">
+                                <a href="/order/form" class="card info-card text-primary">
 
                                     <div class="card-body">
-                                        <h5 class="card-title">ban hang</h5>
+                                        <h5 class="card-title">Bán hàng</h5>
 
                                         <div class="d-flex align-items-center">
                                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -338,13 +391,13 @@
                                         </div>
                                     </div>
 
-                                </div>
+                                </a>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-4">
-                                <div class="card info-card text-success">
+                                <a href="/product" class="card info-card text-success">
 
                                     <div class="card-body">
-                                        <h5 class="card-title">san pham</h5>
+                                        <h5 class="card-title">Sản phẩm</h5>
 
                                         <div class="d-flex align-items-center">
                                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -353,13 +406,13 @@
                                         </div>
                                     </div>
 
-                                </div>
+                                </a>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-4 ">
                                 <div class="card info-card text-danger">
 
                                     <div class="card-body">
-                                        <h5 class="card-title">khach hang</h5>
+                                        <h5 class="card-title">Khách hàng</h5>
 
                                         <div class="d-flex align-items-center">
                                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -374,7 +427,7 @@
                                 <div class="card info-card text-warning">
 
                                     <div class="card-body">
-                                        <h5 class="card-title">bao cao</h5>
+                                        <h5 class="card-title">Báo cáo</h5>
 
                                         <div class="d-flex align-items-center">
                                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -389,7 +442,7 @@
                                 <div class="card info-card">
 
                                     <div class="card-body">
-                                        <h5 class="card-title">so no</h5>
+                                        <h5 class="card-title">Sổ nợ</h5>
 
                                         <div class="d-flex align-items-center">
                                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -404,7 +457,7 @@
                                 <div class="card info-card text-info">
 
                                     <div class="card-body">
-                                        <h5 class="card-title">kho hang</h5>
+                                        <h5 class="card-title">Kho hàng</h5>
 
                                         <div class="d-flex align-items-center">
                                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -422,23 +475,23 @@
             </section>
 
             <div class="quick_support_">
-                <h5 class=""> Ban can ho tro?</h5>
-                <p class="small"> huong dan giai dap thac mac su so</p>
+                <h5 class=""> Bạn cần hỗ trợ?</h5>
+                <p class="small"> hướng dẫn giải đáp thắc mắc sự cố</p>
 
                 <div class="d-flex flex-column gap-2 justify-content-start align-items-center mt-3">
                     <button type="button" class="btn btn-sm btn-outline-primary w-100">
                         <i class="bi bi-chat-dots"></i> Chat ngay
                     </button>
                     <button type="button" class="btn btn-sm btn-outline-primary w-100">
-                        <img src="mess.webp" alt="" width="16px"> Messenger
+                        <img src="mess.webp" alt="" style="width: 16px"> Messenger
                     </button>
                     <button type="button" class="btn btn-sm btn-outline-primary w-100">
-                        <img src="zalo_.png" alt="" width="16px"> ZaloOA
+                        <img src="zalo_.png" alt="" style="width: 16px"> ZaloOA
                     </button>
                 </div>
 
                 <button type="button" class="btn btn-sm btn-success w-100 mt-4">
-                    <i class="bi bi-telephone-plus"></i> Mien phi tu van cua hang mau
+                    <i class="bi bi-telephone-plus"></i> Miễn phí tư vấn cửa hàng mẫu
                 </button>
             </div>
         </main>
@@ -447,10 +500,10 @@
         <!-- ======= Footer ======= -->
         <footer id="footer" class="footer">
             <div class="copyright">
-                &copy; Copyright <strong><span>SỔ KẾ TOÁN</span></strong>. All Rights Reserved
+                &copy; Bản quyền 2025 <strong><span>SÁCH KẾ TOÁN</span></strong>. Mọi quyền được bảo lưu
             </div>
             <div class="credits">
-                Designed by <a href="https://soketoan.vn/login">SỔ KẾ TOÁN</a>
+                Thiết kế bởi <a href="https://www.facebook.com/15K.developer.fullsstack">Dev Fullstack</a>
             </div>
         </footer>
         <!-- End Footer -->
@@ -467,7 +520,7 @@
                     </div>
                     <div class="shop_desc_">
                         <a href="">
-                            Thong tin cua hang <i class="bi bi-chevron-right"></i>
+                            Thông tin cửa hàng <i class="bi bi-chevron-right"></i>
                         </a>
                     </div>
                 </div>
@@ -476,10 +529,10 @@
             <div class="shop_data_">
                 <div class="top__">
                     <div class="left___">
-                        Hom nay <i class="bi bi-eye"></i>
+                        Hôm nay <i class="bi bi-eye"></i>
                     </div>
                     <div class="right___">
-                        <i class="bi bi-bar-chart"></i> Xem lai lo <i class="bi bi-chevron-right"></i>
+                        <i class="bi bi-bar-chart"></i> Xem lãi lỗ <i class="bi bi-chevron-right"></i>
                     </div>
                 </div>
                 <div class="content__">
@@ -494,7 +547,7 @@
                     <span class="line_diagonal"></span>
                     <div class="item_ orders">
                         <div class="title_">
-                            <i class="bi bi-cart-check-fill"></i> Don hang
+                            <i class="bi bi-cart-check-fill"></i> Đơn hàng
                         </div>
                         <div class="value__">
                             0
@@ -503,7 +556,7 @@
                     <span class="line_diagonal"></span>
                     <div class="item_ profits">
                         <div class="title_">
-                            <i class="bi bi-currency-dollar"></i> Loi nhuan
+                            <i class="bi bi-currency-dollar"></i> Lợi nhuận
                         </div>
                         <div class="value__">
                             0
@@ -515,15 +568,15 @@
         <div class="content_page_">
             <div class="_quick_upgrade_">
                 <div class="__title_">
-                    <i class="bi bi-hourglass-split"></i> Ban con 5 ngay dung thu mien phi
+                    <i class="bi bi-hourglass-split"></i> Bạn còn 5 ngày dùng thử miễn phí
                 </div>
                 <div class="__action_">
                     <button type="button" class="contact__">
-                        Lien he tu van
+                        Liên hệ tư vấn
                     </button>
 
                     <button type="button" class="upgrade_now_">
-                        Nang cap ngay
+                        Nâng cấp ngay
                     </button>
                 </div>
             </div>
@@ -535,7 +588,7 @@
                             <i class="bi bi-bag-plus-fill"></i>
                         </div>
                         <div class="title_">
-                            ban hang
+                            Bán hàng
                         </div>
                     </div>
                     <div class="_nav_tab_item_ product_">
@@ -543,7 +596,7 @@
                             <i class="bi bi-archive-fill"></i>
                         </div>
                         <div class="title_">
-                            san pham
+                            Sản phẩm
                         </div>
                     </div>
                     <div class="_nav_tab_item_ customer_">
@@ -551,7 +604,7 @@
                             <i class="bi bi-people-fill"></i>
                         </div>
                         <div class="title_">
-                            khach hang
+                            Khách hàng
                         </div>
                     </div>
                     <div class="_nav_tab_item_ report_">
@@ -559,7 +612,7 @@
                             <i class="bi bi-clipboard2-data-fill"></i>
                         </div>
                         <div class="title_">
-                            bao cao
+                            Báo cáo
                         </div>
                     </div>
                     <div class="_nav_tab_item_ debit_">
@@ -567,7 +620,7 @@
                             <i class="bi bi-stickies-fill"></i>
                         </div>
                         <div class="title_">
-                            so no
+                            Sổ nợ
                         </div>
                     </div>
                     <div class="_nav_tab_item_ storage_">
@@ -575,7 +628,7 @@
                             <i class="bi bi-house-gear-fill"></i>
                         </div>
                         <div class="title_">
-                            kho hang
+                            Kho hàng
                         </div>
                     </div>
                 </div>
@@ -593,10 +646,10 @@
                 </div>
                 <div class="user_info_">
                     <div class="user_name_">
-                        Ban can ho tro?
+                        Bạn cần hỗ trợ?
                     </div>
                     <div class="user_desc_">
-                        huong dan giai dap thac mac su so
+                        hướng dẫn giải đáp thắc mắc sự cố
                     </div>
                 </div>
             </div>
@@ -613,7 +666,7 @@
             </div>
             <div class="_bottom_">
                 <button type="button" class="contact_">
-                    <i class="bi bi-telephone-plus"></i> Mien phi tu van cua hang mau
+                    <i class="bi bi-telephone-plus"></i> Miễn phí tư vấn cửa hàng mẫu
                 </button>
             </div>
         </footer>
