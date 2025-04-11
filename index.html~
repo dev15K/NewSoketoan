@@ -200,17 +200,6 @@
                         </li>
                     </ul>
                 </li><!-- End Icons Nav -->
-
-                <li class="nav-heading">Pages</li>
-
-                <!-- End Logout Nav -->
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#">
-                        <i class="bi bi-box-arrow-in-right"></i>
-                        <span>Logout</span>
-                    </a>
-                </li>
-                <!-- End Logout Nav -->
             </ul>
 
         </aside>
